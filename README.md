@@ -1,4 +1,8 @@
 # Contact-Keeper-API
+### Execution
+// Reloads Server after each change
+
+`npm run server`
 
 ### Tools
 
