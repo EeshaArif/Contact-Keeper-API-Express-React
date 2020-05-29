@@ -1,14 +1,32 @@
 # Contact-Keeper-API
-### Execution
-// Reloads Server after each change
 
-`npm run server`
+`npm run dev`
+// Use Concurrently to run both servers
+
+```
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+```
 
 ### Tools
 
-- mongoDB
-- postman
-- Express Server
+- MongoDB -> Cloud Database
+- postman -> HTTP Client
+- Express -> Backend
+- React -> Frontend
+
+## Server
+
+### Execution
+
+// Reloads Server after each change
+
+`npm run server`
 
 ### Dependencies
 
@@ -32,3 +50,11 @@ app.listen(PORT, () => console.log(`Server start on port ${PORT}`));
 ```
 
 `npm start server`
+
+## Client
+
+`npx create-react-app client`
+
+#### package.json
+
+`"proxy": "http://localhost:5000"`
