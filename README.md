@@ -58,3 +58,11 @@ app.listen(PORT, () => console.log(`Server start on port ${PORT}`));
 #### package.json
 
 `"proxy": "http://localhost:5000"`
+
+#### Remove git
+
+`client\rm -rf .git`
+
+### Dependencies
+
+`client\npm i axios react-router-dom uuid react-transition-group`
