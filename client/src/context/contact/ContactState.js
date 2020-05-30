@@ -1,5 +1,4 @@
 import React, { useReducer } from "react";
-import uuid from "uuid"; // Generate random id
 import contactContext from "./ContactContext";
 import contactReducer from "./ContactReducer";
 import {
@@ -41,7 +40,10 @@ const ContactState = (props) => {
 
   const [state, dispatch] = useReducer(contactReducer, initialState);
   // Add Contact
-
+  const addContact = (contact) => {
+    contact.id = Date.now();
+    dispatch({ type: ADD_CONTACT, payload: contact });
+  };
   // Delete Contact
 
   // Set Current Contact
@@ -58,6 +60,7 @@ const ContactState = (props) => {
     <contactContext.Provider
       value={{
         contacts: state.contacts,
+        addContact,
       }}
     >
       {props.children}
