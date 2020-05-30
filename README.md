@@ -65,7 +65,7 @@ app.listen(PORT, () => console.log(`Server start on port ${PORT}`));
 
 ### Dependencies
 
-`client\npm i axios react-router-dom uuid react-transition-group`
+`client\npm i axios react-router-dom react-transition-group`
 
 ### React-Router-Dom
 
