@@ -1,7 +1,7 @@
 # Contact-Keeper-API
 
 `npm run dev`
-// Use Concurrently to run both servers
+// Use **concurrently** to run both servers
 
 ```
   "scripts": {
