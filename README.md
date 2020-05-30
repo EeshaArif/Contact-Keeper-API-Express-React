@@ -1,4 +1,5 @@
-# Contact-Keeper-API
+# Contact-Keeper
+A MERN application that allows registered users to manage, store and edit their contacts in an efficient way.
 ### Execution
 `npm run dev`
 ##### Client-Server
