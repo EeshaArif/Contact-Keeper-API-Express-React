@@ -40,7 +40,7 @@ const ContactItem = ({ contact }) => {
       <p>
         <button
           className="btn btn-dark btn-sm"
-          onclick={() => setCurrent(contact)}
+          onClick={() => setCurrent(contact)}
         >
           Edit
         </button>
