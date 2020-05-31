@@ -1,8 +1,13 @@
 # Contact-Keeper
+
 A MERN application that allows registered users to manage, store and edit their contacts in an efficient way.
+
 ### Execution
+
 `npm run dev`
+
 ##### Client-Server
+
 // used **concurrently** to run both servers
 
 ```
@@ -11,7 +16,8 @@ A MERN application that allows registered users to manage, store and edit their 
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "clientinstall": "npm install --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefic client && npm run build --prefix client"
   },
 ```
 
@@ -21,6 +27,7 @@ A MERN application that allows registered users to manage, store and edit their 
 - postman -> HTTP Client
 - Express -> Backend
 - React -> Frontend
+- Heroku -> Deployment
 
 ## Server
 
@@ -80,3 +87,20 @@ app.listen(PORT, () => console.log(`Server start on port ${PORT}`));
 ```
 
 `<Link to = '/'>Home</Link>`
+
+### Heroku
+
+`npm install -g heroku`
+
+`client\npm run build`
+
+```
+// Serve static assets in production
+if (process.env.NODE_ENV === "production") {
+  // Set Static folder
+  app.use(express.static("client/build"));
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
+  );
+}
+```
